@@ -1,0 +1,10 @@
+*.pem
+*.auto.*.json
+*.terraform
+*.lock.*
+*.backup
+*.tfstate
+*.pkvars.hcl
+aws.secrets
+terraform.tfvars
+aws-nuke-config.yml
