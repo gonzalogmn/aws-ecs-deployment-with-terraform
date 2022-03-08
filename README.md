@@ -1,5 +1,8 @@
 # aws-ecs-deployment-with-terraform
 
+![](/utils/img/aws-ecs-deployment-with-terraform.drawio.png)
+
+
 ## Requisites
 
 ### Installations required
@@ -33,6 +36,13 @@ region = us-east-1
 ```
 
 ### Execute this **only once**! when creating project from zero
+
+- Create `terraform/remote-state/terraform.tfvars` file with this content:
+
+```
+app_name        = "demo-api"
+app_environment = "test"
+```
 
 - In `terraform/remote-state` folder, run:
 
@@ -105,7 +115,6 @@ cd terraform && terraform destroy
 cd terraform/remote-state && terraform destroy
 
 # To be able to delete all remaining resources
-aws-nuke -c utils/aws-nuke-config.yml --profile admin-ecs-deployment-demo
 aws-nuke -c utils/aws-nuke-config.yml --profile admin-ecs-deployment-demo --no-dry-run
 ```
 
