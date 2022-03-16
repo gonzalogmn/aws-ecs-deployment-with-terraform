@@ -34,4 +34,4 @@ deploy: upload-image
 	@echo "Applying Terraform changes to update project to version ${APP_VERSION}"
 	@cd terraform && terraform init && terraform apply -var="app_version=${APP_VERSION}"
 
-PHONY: start build upload-image deploy
+.PHONY: start build upload-image deploy
